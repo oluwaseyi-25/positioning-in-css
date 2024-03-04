@@ -159,7 +159,7 @@ Something else to note is that the absolute position is taken with respect to th
 
 ```
 
-![[Pasted image 20240304113845 1.png]]
+<img src="Illustrations/Pasted image 20240304114843 1.png" />
 
 ## Fixed
 
@@ -173,7 +173,8 @@ Finally, to demonstrate the fixed position let's make use of box 1.
 </div>
 ```
 
-![[Pasted image 20240304114843 1.png]]
+<img src="Illustrations/Pasted image 20240304114843 1.png" />
+
 Observe that merely changing the position property keeps the box at its previous position unless you specify otherwise. Also box 1 has been taken out of the container div, the outline now contains only the yellow box 2 which is still set to relative position.
 
 ```html
@@ -184,7 +185,7 @@ Observe that merely changing the position property keeps the box at its previous
 	</div>
 ```
 
-![[Pasted image 20240304115319 1.png]]
+<img src="Illustrations/Pasted image 20240304115319 1.png“/>
 This shows that box 1 is positioned relative to the browser window. I have pinned it to the top left corner. This property is applied to headers of webpages.
 # Conclusion
 
