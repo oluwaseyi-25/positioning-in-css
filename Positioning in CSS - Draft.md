@@ -32,14 +32,14 @@ To understand how to arrange elements on a webpage, you first need to understand
 Every HTML tag or element has what I'll call an invisible box around them. 
 
 ### Components of the Box Model:
-> `Content`:  the stuff (text, images etc.) within the tag/element
-> `Padding`:  the space within the box, separating the content from the walls of the box
-> `Border`:  the line around the perimeter of the box
-> `Margin`:  the space outside the box, separating that box from the other elements in that webpage.
-> `Dimensions`:  the width and height of the box
-> `Position`:  the location of the box within the page
+> `Content`:  the stuff (text, images etc.) within the tag/element  
+> `Padding`:  the space within the box, separating the content from the walls of the box  
+> `Border`:  the line around the perimeter of the box  
+> `Margin`:  the space outside the box, separating that box from the other elements in that   webpage.  
+> `Dimensions`:  the width and height of the box  
+> `Position`:  the location of the box within the page  
 
-
+This diagram below illustrates the box model.
 ![[Pasted image 20240227222200.png|500x400]]
 
 What we're really interested in at the moment is the position of the box surrounding an element. Like I said earlier, the position of a box is the location of that box within the page. To correctly position and element you need to understand a few keywords:
@@ -50,10 +50,11 @@ element {
 	position: static|relative|absolute|fixed;
 } 
 ```
-- `static`: This is the default position used by every HTML element. It keeps an element in its original position in the page flow.
+
+- `static`: This is the default position for every HTML element. It keeps an element in its original position in the page flow. The element can not be offset in this state and can only be moved around by adjusting margins.
 - ``relative``: Here, the elements are kept in their original position in the page flow as well but the now can be offset with respect to their original (`static`) position.
-- ``absolute``:  In simple terms, absolute positioning takes an element out of the regular page flow and offsets its position with respect to the closest "non-static" element which is usually the browser window (the ``html`` element/tag) or any other element set to anything other than the default static position.
-- ``fixed``: Pretty similar to  `absolute` but, as the name implies, when applied, the element retains a fixed position on the screen, regardless of scrolling action. The position of the element taken with respect to the browser window and not any other element.
+- ``absolute``:  In simple terms, absolute positioning takes an element out of the regular page flow and offsets its position with respect to the closest "non-static" element which is usually the browser window or any parent element set to a position property other than the default static .
+- ``fixed``: Pretty similar to  `absolute` but, as the name implies, when applied, the element retains a fixed position on the screen, regardless of scrolling action. The position of the element is with respect to only the browser window.
 #### 2. `top|left|bottom|right` property:
 specifies the position of an element based on an offset relative to the corresponding side of the box model and the space - represented by some value and a unit of measurement.
 
@@ -64,19 +65,19 @@ element {
 }
 ```
 
-## Units:
+## Units
 There are multiple units of measurement in CSS. From the ones you know and love to some abstract units that wouldn't seem to make sense at first. Here are some of them:
 
-| Class    | Units     | Rationale                                                                    |
-| -------- | --------- | ---------------------------------------------------------------------------- |
-| pixel    | px        | individual pixels on the monitor                                             |
-| percent  | %         | percentage of the screen width or height                                     |
-| metric   | m, cm, mm | standard metric units from geometry                                          |
-| imperial | ft, in    | alternative to metric units                                                  |
-| viewport | vw, vh    | percentage (1/100) of the width and height of the viewport (browser display) |
+| Class    | Units     | Rationale                                                                  |
+| -------- | --------- | -------------------------------------------------------------------------- |
+| pixel    | px        | individual pixels on the monitor                                           |
+| percent  | %         | percentage of the screen width or height                                   |
+| metric   | m, cm, mm | standard metric units from geometry                                        |
+| imperial | ft, in    | alternative to metric units                                                |
+| viewport | vw, vh    | percentage (1/100) of the width or height of the viewport (browser window) |
 
 # Examples
----
+
 To demonstrate what we've learnt so far let's make use of this example.  Open your text editor and follow along.
 
 The example contains three simple boxes made using ``div`` elements and they are contained within a larger ``div`` - outlined in black. I made use of the ***box*** class to set the dimensions  and the fill of the boxes to keep them consistent and I changed the color of each box using inline CSS.
@@ -115,6 +116,8 @@ The three boxes are in their original position - ``static`` - within the page fl
 
 ## Relative
 
+Let's see what happens when we make block 2 relative.
+
 ```html
 <div style="border: 1px solid;">
 	<div class="block" style="background: red;">1</div>
@@ -123,8 +126,11 @@ The three boxes are in their original position - ``static`` - within the page fl
 </div>
 ```
 
-![[Pasted image 20240304112532 1.png]]
+![[Pasted image 20240304112532 1.png]] Block 2 now leaves a 100px gap to its left. The relative position enables us to move an element around with respect to its original position.
 
+## Absolute
+
+Now let's set the position of box 3 to absolute. We can pin it to the bottom-right corner by setting both the bottom and the right offset values to 0 pixels.
 ```html
 <div style="border: 1px solid;">
 		<div class="box" style="background: red;">1</div>
@@ -133,10 +139,11 @@ The three boxes are in their original position - ``static`` - within the page fl
  	</div>
 ```
 
-## Absolute
 
 ![[Pasted image 20240304113530 1.png]]
+Observe the position of box 3. Also notice that the containing div now outlines only boxes 1 and 2
 
+Something else to note is that the absolute position is taken with respect to the closest containing non-static element. So when we set the containing div to relative, the position of the box adjusts to the bottom right corner of the containing div instead.
 ``` html
 	<div style="border: 1px solid; position: relative;">
 		<div class="box" style="background: red;">1</div>
@@ -150,6 +157,8 @@ The three boxes are in their original position - ``static`` - within the page fl
 
 ## Fixed
 
+Finally, to demonstrate the fixed position let's make use of box 1. 
+
 ```html
 <div style="border: 1px solid; position: relative;">
 		<div class="box" style="background: red; position: fixed;">1</div>
@@ -159,6 +168,7 @@ The three boxes are in their original position - ``static`` - within the page fl
 ```
 
 ![[Pasted image 20240304114843 1.png]]
+Observe that merely changing the position property keeps the box at its previous position unless you specify otherwise. Also box 1 has been taken out of the container div, the outline now contains only the yellow box 2 which is still set to relative position.
 
 ```html
 <div style="border: 1px solid; position: relative;">
@@ -167,7 +177,9 @@ The three boxes are in their original position - ``static`` - within the page fl
 		<div class="box" style="background: blue;">3</div>
 	</div>
 ```
+
 ![[Pasted image 20240304115319 1.png]]
+This shows that box 1 is positioned relative to the browser window. I have pinned it to the top left corner. This property is applied to headers of webpages.
 # Conclusion
----
+
 With these examples you should have a good understanding of the process of positioning elements in CSS. I implore you to experiment as much as possible, move things around as you see fit or better yet, work on a small project to demonstrate what you've learnt.
