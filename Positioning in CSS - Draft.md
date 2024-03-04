@@ -117,7 +117,7 @@ The example contains three simple boxes made using ``div`` elements and they are
 
 ```
 
-![[Pasted image 20240304112432 1.png]]
+<img src="Illustrations/Pasted image 20240304112432 1.png<img src="Illustrations/"/>
 The three boxes are in their original position - ``static`` - within the page flow. No changes have been made yet.
 
 ## Relative
@@ -182,10 +182,10 @@ Observe that merely changing the position property keeps the box at its previous
 		<div class="box" style="background: red; position: fixed; left: 0px; top: 0px;">1</div>
 		<div class="box" style="background: yellow; position: relative; left: 100px;">2</div>
 		<div class="box" style="background: blue;">3</div>
-	</div>
+</div>
 ```
 
-<img src="Illustrations/Pasted image 20240304115319 1.png“/>
+<img src="Illustrations/Pasted image 20240304115319 1.png"/>
 This shows that box 1 is positioned relative to the browser window. I have pinned it to the top left corner. This property is applied to headers of webpages.
 # Conclusion
 
