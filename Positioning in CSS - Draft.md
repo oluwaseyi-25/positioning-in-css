@@ -1,32 +1,38 @@
 # Introduction
----
-So you're a beginner struggling with sizing and positioning elements in CSS, or maybe you're a seasoned veteran looking for a quick reminder on the basics. In either case, I've got you covered. This topic can be quite tricky to grasp at first, but at the end of this article, I assure you a good working knowledge of this concept.
+
+So you're a beginner struggling with sizing and positioning elements in CSS, or maybe you're a seasoned veteran looking for a quick reminder on the basics. In either case, I've got you covered. This topic can be quite tricky to grasp at first, but at the end of this article, I assure you a good working knowledge of this concept.  
+
 # What is CSS?
----
+
 Do I really need to explain what CSS is to you again? Oh well. 
 **CSS** (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. To ***cascade*** means to stack or build up something one layer at a time. 
 CSS is a stylesheet language used to describe the presentation of a webpage written in [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) or [XML](https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction). It describes to the browser how elements should be rendered on screen. 
-Think of HTML as the skeleton - structure -  of  a webpage and CSS as the flesh, skin and hair, making the site more appealing.
+Think of HTML as the skeleton - structure -  of  a webpage and CSS as the flesh, skin and hair, making the site more appealing.  
+
 ## 3 Methods of using CSS 
 
 1. Inline: Here the CSS code is placed within the HTML tags themselves using the "style" keyword.
 ```html
 <div style="property: value;"></div>
 ```
-2. Embedded: This is the use of the "style" tag within a HTML document to contain all the CSS code for a webpage.
+2. Embedded: This is the use of the "style" tag within a HTML document to contain all the CSS code for a Web page.  
+
 ```html
 <style>
 	element {
 		property: value;
 	}
 </style>
-```
+```  
+
 3. External file: The HTML file is linked to an external CSS file containing the styling information using the `link` tag. This is my favorite because it allows you to have multiple, separate, well-structured files rather than one large HTML file.
 ```html
 <link rel="stylesheet" href="styles.css">
-```
+```  
+
 # Let's get into it...
 ---
+
 ## Overview of the CSS Box Model
 To understand how to arrange elements on a webpage, you first need to understand how these elements are displayed on the screen in the first place, this is where the CSS Box Model comes in.
 Every HTML tag or element has what I'll call an invisible box around them. 
@@ -40,7 +46,7 @@ Every HTML tag or element has what I'll call an invisible box around them.
 > `Position`:  the location of the box within the page  
 
 This diagram below illustrates the box model.
-![[Pasted image 20240227222200.png|500x400]]
+<img src="Illustrations/Pasted image 20240227222200.png" width = "500"/>
 
 What we're really interested in at the moment is the position of the box surrounding an element. Like I said earlier, the position of a box is the location of that box within the page. To correctly position and element you need to understand a few keywords:
 #### 1. `position` property:
