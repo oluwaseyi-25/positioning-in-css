@@ -18,9 +18,9 @@ Think of HTML as the skeleton - structure -  of  a webpage and CSS as the flesh,
 
 ```html
 <style>
- element {
-		property: value;
-	}
+  element {
+    property: value;
+  }
 </style>
 ```  
 
@@ -65,8 +65,8 @@ specifies the position of an element based on an offset relative to the correspo
 
 ```css
 element {
-	position: relative|absolute|fixed;
-	top|left|bottom|right: value(unit);
+  position: relative|absolute|fixed;
+  top|left|bottom|right: value(unit);
 }
 ```
 
@@ -90,30 +90,29 @@ The example contains three simple boxes made using ``div`` elements and they are
 ```html
 <!DOCTYPE html>
 <html>
-<head>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <title>LazyCoder's Blog</title>
- <style type="text/css" >
-  .box {
-   text-align: center;
-   line-height: 100px;
-   font-size: 25pt;
-   width: 100px;
-   height: 100px;
-   margin: 0px;
-  }
- </style>
-</head>
-<body>
- <div style="border: 1px solid;">
-  <div class="box" style="background: red;">1</div>
-  <div class="box" style="background: yellow;">2</div>
-  <div class="box" style="background: blue;">3</div>
- </div>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LazyCoder's Blog</title>
+    <style type="text/css" >
+     .box {
+        text-align: center;
+        line-height: 100px;
+        font-size: 25pt;
+        width: 100px;
+        height: 100px;
+        margin: 0px;
+     }
+    </style>
+  </head>
+  <body>
+    <div style="border: 1px solid;">
+      <div class="box" style="background: red;">1</div>
+      <div class="box" style="background: yellow;">2</div>
+      <div class="box" style="background: blue;">3</div>
+    </div>
+  </body>
 </html>
-
 ```
 
 <img src="Illustrations/Pasted image 20240304112432 1.png" />   
@@ -126,9 +125,9 @@ Let's see what happens when we make block 2 relative.
 
 ```html
 <div style="border: 1px solid;">
-	<div class="block" style="background: red;">1</div>
-	<div class="block" style="background: yellow; position:                    relative; left: 100px;">2</div>
-	<div class="block" style="background: blue;">3</div>
+  <div class="block" style="background: red;">1</div>
+  <div class="block" style="background: yellow; position: relative; left: 100px;">2</div>
+  <div class="block" style="background: blue;">3</div>
 </div>
 ```
 
@@ -141,8 +140,8 @@ Now let's set the position of box 3 to absolute. We can pin it to the bottom-rig
 
 ```html
 <div style="border: 1px solid;">
- <div class="box" style="background: red;">1</div>
- <div class="box" style="background: yellow; position:                      relative; left: 100px;">2</div>
+  <div class="box" style="background: red;">1</div>
+  <div class="box" style="background: yellow; position: relative; left: 100px;">2</div>
   <div class="box" style="background: blue; position: bottom: 0px; right: 0px;">3</div>
 </div>
 ```
@@ -153,13 +152,13 @@ Now let's set the position of box 3 to absolute. We can pin it to the bottom-rig
 Observe the position of box 3. Also notice that the containing div now outlines only boxes 1 and 2
 
 Something else to note is that the absolute position is taken with respect to the closest containing non-static element. So when we set the containing div to relative, the position of the box adjusts to the bottom right corner of the containing div instead.
+
 ``` html
 <div style="border: 1px solid; position: relative;">
   <div class="box" style="background: red;">1</div>
-		<div class="box" style="background: yellow; position: relative; left: 100px;">2</div>
-		<div class="box" style="background: blue; position: absolute; bottom: 0px; right: 0px;">3</div>
+  <div class="box" style="background: yellow; position: relative; left: 100px;">2</div>
+  <div class="box" style="background: blue; position: absolute; bottom: 0px; right: 0px;">3</div>
 </div>
-
 ```
 
 <img src="Illustrations/Pasted image 20240304114843 1.png" />
@@ -170,9 +169,9 @@ Finally, to demonstrate the fixed position let's make use of box 1.
 
 ```html
 <div style="border: 1px solid; position: relative;">
-		<div class="box" style="background: red; position: fixed;">1</div>
-		<div class="box" style="background: yellow; position: relative; left: 100px;">2</div>
-		<div class="box" style="background: blue; position: absolute; bottom: 0px; right: 0px;">3</div>
+  <div class="box" style="background: red; position: fixed;">1</div>
+  <div class="box" style="background: yellow; position: relative; left: 100px;">2</div>
+  <div class="box" style="background: blue; position: absolute; bottom: 0px; right: 0px;">3</div>
 </div>
 ```
 
@@ -182,9 +181,9 @@ Observe that merely changing the position property keeps the box at its previous
 
 ```html
 <div style="border: 1px solid; position: relative;">
-		<div class="box" style="background: red; position: fixed; left: 0px; top: 0px;">1</div>
-		<div class="box" style="background: yellow; position: relative; left: 100px;">2</div>
-		<div class="box" style="background: blue;">3</div>
+  <div class="box" style="background: red; position: fixed; left: 0px; top: 0px;">1</div>
+  <div class="box" style="background: yellow; position: relative; left: 100px;">2</div>
+  <div class="box" style="background: blue;">3</div>
 </div>
 ```
 
