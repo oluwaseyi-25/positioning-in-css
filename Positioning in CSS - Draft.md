@@ -3,8 +3,7 @@
 So you're a beginner struggling with sizing and positioning elements in CSS, or maybe you're a seasoned veteran looking for a quick reminder on the basics. In either case, I've got you covered. This topic can be quite tricky to grasp at first, but at the end of this article, I assure you a good working knowledge of this concept.  
 
 # What is CSS?
-
-Do I really need to explain what CSS is to you again? Oh well. 
+ 
 **CSS** (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. To ***cascade*** means to stack or build up something one layer at a time. 
 CSS is a stylesheet language used to describe the presentation of a webpage written in [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) or [XML](https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction). It describes to the browser how elements should be rendered on screen. 
 Think of HTML as the skeleton - structure -  of  a webpage and CSS as the flesh, skin and hair, making the site more appealing.  
@@ -132,11 +131,13 @@ Let's see what happens when we make block 2 relative.
 </div>
 ```
 
-![[Pasted image 20240304112532 1.png]] Block 2 now leaves a 100px gap to its left. The relative position enables us to move an element around with respect to its original position.
+<img src="Illustrations/Pasted image 20240304112532 1.png" />
+Block 2 now leaves a 100px gap to its left. The relative position enables us to move an element around with respect to its original position.
 
 ## Absolute
 
-Now let's set the position of box 3 to absolute. We can pin it to the bottom-right corner by setting both the bottom and the right offset values to 0 pixels.
+Now let's set the position of box 3 to absolute. We can pin it to the bottom-right corner by setting both the bottom and the right offset values to 0 pixels.  
+
 ```html
 <div style="border: 1px solid;">
 		<div class="box" style="background: red;">1</div>
@@ -146,7 +147,8 @@ Now let's set the position of box 3 to absolute. We can pin it to the bottom-rig
 ```
 
 
-![[Pasted image 20240304113530 1.png]]
+<img src="Illustrations/Pasted image 20240304113530 1.png" />
+
 Observe the position of box 3. Also notice that the containing div now outlines only boxes 1 and 2
 
 Something else to note is that the absolute position is taken with respect to the closest containing non-static element. So when we set the containing div to relative, the position of the box adjusts to the bottom right corner of the containing div instead.
