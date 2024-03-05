@@ -18,7 +18,7 @@ Think of HTML as the skeleton - structure -  of  a webpage and CSS as the flesh,
 
 ```html
 <style>
-	element {
+ element {
 		property: value;
 	}
 </style>
@@ -91,26 +91,26 @@ The example contains three simple boxes made using ``div`` elements and they are
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LazyCoder's Blog</title>
-	<style type="text/css" >
-		.box {
-			text-align: center;
-			line-height: 100px;
-			font-size: 25pt;
-			width: 100px;
-			height: 100px;
-			margin: 0px;
-		}
-	</style>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>LazyCoder's Blog</title>
+ <style type="text/css" >
+  .box {
+   text-align: center;
+   line-height: 100px;
+   font-size: 25pt;
+   width: 100px;
+   height: 100px;
+   margin: 0px;
+  }
+ </style>
 </head>
 <body>
-	<div style="border: 1px solid;">
-		<div class="box" style="background: red;">1</div>
-		<div class="box" style="background: yellow;">2</div>
-		<div class="box" style="background: blue;">3</div>
-	</div>
+ <div style="border: 1px solid;">
+  <div class="box" style="background: red;">1</div>
+  <div class="box" style="background: yellow;">2</div>
+  <div class="box" style="background: blue;">3</div>
+ </div>
 </body>
 </html>
 
@@ -141,9 +141,9 @@ Now let's set the position of box 3 to absolute. We can pin it to the bottom-rig
 
 ```html
 <div style="border: 1px solid;">
-		<div class="box" style="background: red;">1</div>
-		<div class="box" style="background: yellow; position:                      relative; left: 100px;">2</div>
-		<div class="box" style="background: blue; position: bottom: 0px; right: 0px;">3</div>
+ <div class="box" style="background: red;">1</div>
+ <div class="box" style="background: yellow; position:                      relative; left: 100px;">2</div>
+  <div class="box" style="background: blue; position: bottom: 0px; right: 0px;">3</div>
 </div>
 ```
 
@@ -189,7 +189,8 @@ Observe that merely changing the position property keeps the box at its previous
 ```
 
 <img src="Illustrations/Pasted image 20240304115319 1.png"/>
-This shows that box 1 is positioned relative to the browser window. I have pinned it to the top left corner. This property is applied to headers of webpages.
+This shows that box 1 is positioned relative to the browser window. I have pinned it to the top left corner. This property is applied to headers of Web pages.  
+
 # Conclusion
 
 With these examples you should have a good understanding of the process of positioning elements in CSS. I implore you to experiment as much as possible, move things around as you see fit or better yet, work on a small project to demonstrate what you've learnt.
