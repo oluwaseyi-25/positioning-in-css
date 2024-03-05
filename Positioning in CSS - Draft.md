@@ -116,7 +116,8 @@ The example contains three simple boxes made using ``div`` elements and they are
 
 ```
 
-<img src="Illustrations/Pasted image 20240304112432 1.png<img src="Illustrations/"/>
+<img src="Illustrations/Pasted image 20240304112432 1.png" />   
+
 The three boxes are in their original position - ``static`` - within the page flow. No changes have been made yet.
 
 ## Relative
@@ -142,8 +143,8 @@ Now let's set the position of box 3 to absolute. We can pin it to the bottom-rig
 <div style="border: 1px solid;">
 		<div class="box" style="background: red;">1</div>
 		<div class="box" style="background: yellow; position:                      relative; left: 100px;">2</div>
-		<div class="box" style="background: blue; position: absolute;              bottom: 0px; right: 0px;">3</div>
- 	</div>
+		<div class="box" style="background: blue; position: bottom: 0px; right: 0px;">3</div>
+</div>
 ```
 
 
@@ -153,11 +154,11 @@ Observe the position of box 3. Also notice that the containing div now outlines 
 
 Something else to note is that the absolute position is taken with respect to the closest containing non-static element. So when we set the containing div to relative, the position of the box adjusts to the bottom right corner of the containing div instead.
 ``` html
-	<div style="border: 1px solid; position: relative;">
-		<div class="box" style="background: red;">1</div>
-		<div class="box" style="background: yellow; position:                      relative; left: 100px;">2</div>
-		<div class="box" style="background: blue; position: absolute;              bottom: 0px; right: 0px;">3</div>
-	</div>
+<div style="border: 1px solid; position: relative;">
+  <div class="box" style="background: red;">1</div>
+		<div class="box" style="background: yellow; position: relative; left: 100px;">2</div>
+		<div class="box" style="background: blue; position: absolute; bottom: 0px; right: 0px;">3</div>
+</div>
 
 ```
 
